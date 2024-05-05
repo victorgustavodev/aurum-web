@@ -2,7 +2,7 @@ import img from '../assets/image-apresentation.png'
 
 const sectionMain = () => {
   return (
-    <div className='px-8 lg:px-32 flex items-center justify-center'>
+    <div className='px-8 lg:px-32  pt-24 md:pt-36 flex items-center justify-center'>
 
         <div className='flex flex-col items-center gap-16 lg:flex-row'>
 

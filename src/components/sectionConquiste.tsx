@@ -13,7 +13,7 @@ const sectionConquiste = () => {
                     <li>Visibilidade Online</li>
                     <li>Suporte Especializado</li>
                 </ul>
-                <button className='border-[1px] w-[190px] h-[50px] uppercase transition duration-150 hover:scale-105 hover:bg-black hover:text-white'>Entrar em contato</button>
+                <button className='border-[1px] w-[190px] h-[50px] uppercase transition duration-150 hover:scale-105 hover:border-0 hover:bg-black hover:text-white'>Entrar em contato</button>
             </div>
         </section>
 

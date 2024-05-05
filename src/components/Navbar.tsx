@@ -1,37 +1,98 @@
-import iconMenu from '../assets/icon-menu.png';
-import logo from '../assets/logo.png'
+import { Menu as Menu, X } from "lucide-react";
+import logo from "../assets/logo.png";
+import { useState } from "react";
+import ListMobile from "./ListMobile";
+import ModalLogin from "./modalLogin"
+import ModalRegister from "./modalRegister"
+
 
 const Navbar = () => {
+  const [ativo, setAtivo] = useState(false);
+  const toggleIcon = () => {
+    setAtivo(!ativo);
+  };
+
+  const [openModalLogin, setOpenModalLogin] = useState(false)
+  const [openModalRegister, setOpenModalRegister] = useState(false)
+
   return (
-    // <div className='flex w-screen items-center p-4 justify-around md:justify-between md:px-56'>
+    <div>
+    <nav className="flex justify-between px-9 p-5 md:px-16 2xl:px-32 fixed w-screen bg-white shadow-md">
+      <a className="flex gap-1 items-end">
+        <img src={logo} alt="" className="w-8 h-7" />
+        <span className="text-base font-bold">Aurum Web</span>
+      </a>
 
-    <nav className='flex justify-between px-9 pt-5 md:px-16 2xl:px-32'>
-      <div className='flex gap-1 items-end'>
-        <img src={logo} alt="" className='w-8 h-7' />
-        <span className='text-base font-bold'>Aurum Web</span>
+      <button onClick={toggleIcon}>
+        { ativo ? (
+          <X className="w-8 h-7 sm:hidden" />
+        ) : (
+          <Menu className="w-8 h-7 sm:hidden" />
+        )}
+      </button>
+      <div className="hidden sm:block">
+        <section className="flex items-center gap-10">
+          <ul className="gap-2 flex text-base md:gap-8">
+            <a
+              href=""
+              className="transition-all duration-300 hover:scale-105 hover:font-medium"
+            >
+              <li>Home</li>
+            </a>
+            <a
+              href=""
+              className="transition-all duration-300 hover:scale-105 hover:font-medium"
+            >
+              <li>Destaques</li>
+            </a>
+            <div>
+              <a
+                href=""
+                className="transition-all duration-300 hover:scale-105 hover:font-medium"
+              >
+                <li>Contato</li>
+              </a>
+            </div>
+            <div>
+              <a
+                href=""
+                className="transition-all duration-300 hover:scale-105 hover:font-medium"
+              >
+                <li>Feedback</li>
+              </a>
+            </div>
+            <a
+              href=""
+              className="transition-all duration-300 hover:scale-105 hover:font-medium"
+            >
+              <li>Dúvidas</li>
+            </a>
+          </ul>
+          <div className="flex gap-3">
+            <button onClick={()=> setOpenModalLogin(true) } className="rounded-md border-solid bg-black text-white transition border-[1px] border-black bg-gray-300 px-3 py-1 hover:bg-yellow hover:text-white hover:scale-105">
+              Login
+            </button>
+            <button onClick={()=> setOpenModalRegister(true) } className="rounded-md border-solid bg-white text-black transition border-[1px] border-black bg-gray-300 px-3 py-1 hover:bg-yellow hover:text-white hover:scale-105">
+              Register
+            </button>
+            </div>
+        </section>
+{/* List actived menu */}
       </div>
-      <button><img src={iconMenu} alt="" className='w-8 h-7 sm:hidden' /></button>
-
-    <div className='hidden sm:block'>
-      <section className='flex items-center gap-5'>
-        <ul className='gap-2 flex text-base md:gap-8'>
-          <a href=""><li >Home</li></a>
-          <a href=""><li>Sobre</li></a>
-          <div>
-          <a href=""><li>Serviços</li></a>
-          
-          </div>
-          <a href=""><li>Contato</li></a>
-        </ul>
-    <div className='flex gap-4'>
-        <button className='border-solid border-2 border-black bg-gray-300 px-3 py-1'>Login</button>
-        <button className='border-solid border-2 border-black bg-black text-white px-3 py-1'>Registrar</button>
-    </div>
-    </section>
-    </div>
-      {/* </div> */}
     </nav>
+    <div>
+        { ativo ? (
+          <ListMobile />
+        ) : (
+          <div className="hidden">
+            <ListMobile/>
+          </div>
+        )}
+      </div>
+      <ModalLogin isOpen={openModalLogin}/>
+      <ModalRegister isOpen={openModalRegister}/>
+      </div>
   );
-}
+};
 
 export default Navbar;
