@@ -5,7 +5,6 @@ import ListMobile from "./ListMobile";
 import ModalLogin from "./modalLogin"
 import ModalRegister from "./modalRegister"
 
-
 const Navbar = () => {
   const [ativo, setAtivo] = useState(false);
   const toggleIcon = () => {
@@ -16,8 +15,8 @@ const Navbar = () => {
   const [openModalRegister, setOpenModalRegister] = useState(false)
 
   return (
-    <div>
-    <nav className="flex justify-between px-9 p-5 md:px-16 2xl:px-32 fixed w-screen bg-white shadow-md">
+    <div id="home">
+    <nav className="flex justify-between px-16 p-5 2xl:px-32 fixed w-screen bg-white shadow-md h-[68px]">
       <a className="flex gap-1 items-end">
         <img src={logo} alt="" className="w-8 h-7" />
         <span className="text-base font-bold">Aurum Web</span>
@@ -25,29 +24,29 @@ const Navbar = () => {
 
       <button onClick={toggleIcon}>
         { ativo ? (
-          <X className="w-8 h-7 sm:hidden" />
+          <X className="w-8 h-7 lg:hidden" />
         ) : (
-          <Menu className="w-8 h-7 sm:hidden" />
+          <Menu className="w-8 h-7 lg:hidden" />
         )}
       </button>
-      <div className="hidden sm:block">
+      <div className="hidden lg:block">
         <section className="flex items-center gap-10">
           <ul className="gap-2 flex text-base md:gap-8">
             <a
-              href=""
+              href="#home"
               className="transition-all duration-300 hover:scale-105 hover:font-medium"
             >
               <li>Home</li>
             </a>
             <a
-              href=""
+              href="#section-pontos"
               className="transition-all duration-300 hover:scale-105 hover:font-medium"
             >
               <li>Destaques</li>
             </a>
             <div>
               <a
-                href=""
+                href="#section-destaques"
                 className="transition-all duration-300 hover:scale-105 hover:font-medium"
               >
                 <li>Contato</li>
@@ -55,14 +54,14 @@ const Navbar = () => {
             </div>
             <div>
               <a
-                href=""
+                href="#section-feedbacks"
                 className="transition-all duration-300 hover:scale-105 hover:font-medium"
               >
                 <li>Feedback</li>
               </a>
             </div>
             <a
-              href=""
+              href="#section-duvidas"
               className="transition-all duration-300 hover:scale-105 hover:font-medium"
             >
               <li>Dúvidas</li>

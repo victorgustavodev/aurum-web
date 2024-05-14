@@ -6,7 +6,6 @@ import Feedbacks from "./components/feedbacks"
 import SectionContato from "./components/sectionContato"
 import SectionFaq from "./components/sectionFaq" 
 import Footer from "./components/footer"
-import Modal from "./components/modalLogin"
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import img from '../assets/image-conquiste-o-digital.png'
 
 const sectionConquiste = () => {
   return (
-    <div className="flex flex-col gap-20 px-8 xl:flex-row lg:px-52 md:px-32 justify-center items-center">
+    <div id='section-destaques' className="flex flex-col gap-20 px-8 xl:flex-row lg:px-52 md:px-32 justify-center items-center">
         <section>
             <div className='flex flex-col gap-7'>
                 <h1 className='font-semibold text-2xl text-center lg:text-left lg:text-5xl'>Conquiste o digital</h1>

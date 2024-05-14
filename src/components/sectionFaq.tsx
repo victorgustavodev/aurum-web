@@ -11,7 +11,7 @@ const SectionFaq = () => {
   };
 
   return (
-    <div className="px-8 flex flex-col gap-9 pb-12 lg:px-52">
+    <div id="section-duvidas" className="px-8 flex flex-col gap-9 pb-12 lg:px-52">
       <h1 className="text-2xl text-center font-semibold lg:text-5xl">
         Perguntas frequentes (FAQs)
       </h1>
