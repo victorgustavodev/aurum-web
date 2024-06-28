@@ -8,7 +8,6 @@ const Menu = () => {
     const [menu_class, setMenuClass] = useState("menu hidden")
     const [isMenuClicked, setIsMenuClicked] = useState(false)
 
-    // toggle burger menu change
     const updateMenu = () => {
         if(!isMenuClicked) {
             setBurgerClass("burger-bar clicked")

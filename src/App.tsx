@@ -9,7 +9,7 @@ import Footer from "./components/footer"
 
 function App() {
   return (
-    <div className="grid gap-16 lg:gap-36 select-none">
+    <div className="grid gap-16 lg:gap-24">
         <Navbar/>
         <SectionMain/>
         <SectionPontos/>
