@@ -37,3 +37,16 @@
   scrollbar-width: thin;
   scrollbar-color: #daa520 #fff;
 } */
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0); /* Posição inicial e final */
+  }
+  50% {
+    transform: translateY(-15px); /* Elevação no meio da animação */
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}

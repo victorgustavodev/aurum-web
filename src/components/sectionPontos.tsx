@@ -2,7 +2,7 @@ import iconBox from '../assets/iconBox.png'
 
 const sectionPontos = () => {
   return (
-    <div id='section-pontos' className='py-24 px-8 flex flex-col gap-9 pb-10 md:px-52 md:gap-20 bg-gray'>
+    <div id='section-pontos' className='py-24 px-8 flex flex-col gap-9 pb-10 md:gap-20 md:p-40 bg-gray text-black'>
       <h1 className='text-2xl font-semibold text-center lg:text-5xl' >Pontos de destaques</h1>
       <section className='flex flex-col gap-8 lg:flex-row'>
             <div className='flex flex-col gap-7 items-center text-center '>

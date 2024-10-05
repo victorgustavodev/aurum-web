@@ -3,7 +3,7 @@ import avatar from '../assets/avatar.png'
 
 const feedbacks = () => {
   return (
-    <div id='section-feedbacks' className='flex flex-col gap-24 px-8 text-center lg:px-32'>
+    <div id='section-feedbacks' className='flex flex-col gap-24 py-9 px-8 md:p-24 text-center lg:px-32 bg-white text-black'>
         <section className='grid gap-3'>
             <h1 className='font-semibold text-2xl lg:text-5xl'>Feedbacks</h1>
             <p>Feedbacks dos nossos clientes.</p>

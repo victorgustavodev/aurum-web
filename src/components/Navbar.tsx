@@ -11,11 +11,11 @@ const Navbar = () => {
 
   return (
     <div id="home">
-      <div className="bg-white shadow-md h-[68px] w-full fixed flex justify-center">
+      <div className="bg-strong-Blue shadow-md h-[68px] w-full fixed flex justify-center text-white shadow-md">
         <nav className="flex justify-between py-5 w-screen max-w-[1184px] px-4">
-          <a className="flex gap-1 items-end">
+          <a href="" className="flex gap-1 items-end">
             <img src={logo} alt="" className="w-8 h-7" />
-            <span className="text-base font-bold">Aurum Web</span>
+            <span className="text-base font-bold">Aurum Tech</span>
           </a>
 
           <button onClick={toggleIcon}>
@@ -48,25 +48,15 @@ const Navbar = () => {
                     <li>Contato</li>
                   </a>
                 </div>
-                <div>
-                  <a
-                    href="#section-feedbacks"
-                    className="transition-all duration-300 hover:scale-105 hover:font-medium"
-                  >
-                    <li>Feedback</li>
-                  </a>
-                </div>
-                <a
-                  href="#section-duvidas"
-                  className="transition-all duration-300 hover:scale-105 hover:font-medium"
-                >
-                  <li>Dúvidas</li>
-                </a>
               </ul>
               <div className="flex gap-3">
-                <button className="rounded-md border-solid bg-black text-white transition border-[1px] border-black bg-gray-300 px-3 py-1 hover:opacity-70  hover:scale-105">
-                  Entrar em contato
-                </button>
+                <a
+                  target="_blank"
+                  href="https://discord.gg/aAqTB4pkxd"
+                  className="rounded-md border-solid bg-white text-black transition border-[1px] font-medium border-black bg-gray-300 px-3 py-1 hover:opacity-70 hover:scale-105"
+                >
+                  Visite nosso Discord
+                </a>
               </div>
             </section>
             {/* List actived menu */}
